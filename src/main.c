@@ -14,17 +14,17 @@ void scan(){
 
 void iteracao(){
 	for(i = 1; i <= nIter; i++){
-      flagNull = 1;
-      for(j = 0; j < 5; j++){
-        if((i%val[j]) == 0){    
+		flagNull = 1;
+		for(j = 0; j < 5; j++){
+       			 if((i%val[j]) == 0){    
 				printf("%d", j);       
 				flagNull = 0;      
 			  }
-  	  }
+  		}
     
-    if(flagNull)
-    printf("-");
-    printf("\n");
+   		 if(flagNull)
+   		 printf("-");
+   		 printf("\n");
 	}
   
  	return;
