@@ -1,14 +1,38 @@
 #include <stdio.h>
 
-int main() {
-  int a[5];
-  int n;
+int val[6];
+int i, j, flagNull;
+int nIter;
 
-  scanf("%d %d %d %d %d %d", &(a[0]), &(a[1]), &(a[2]), &(a[3]), &(a[4]), &n);
+void scan(){
+	for(i = 0; i < 5; i++)
+		scanf("%d", &val[i]);
+ 	
+	scanf("%d", &nIter);
+	return;
+}
 
-  for (int i=0; i<n; i++) {
-    /* Imprime resultado da n-esima iteracao do scheduler */
-  }
+void iteracao(){
+	for(i = 1; i <= nIter; i++){
+      flagNull = 1;
+      for(j = 0; j < 5; j++){
+        if((i%val[j]) == 0){    
+				printf("%d", j);       
+				flagNull = 0;      
+			  }
+  	  }
+    
+    if(flagNull)
+    printf("-");
+    printf("\n");
+	}
+  
+ 	return;
+}
 
-  return 0;
+int main(){
+  scan();
+  iteracao();
+        
+	return 0;
 }
